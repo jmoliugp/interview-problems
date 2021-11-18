@@ -7,9 +7,9 @@
  * @param {number[]} array
  * @return {number[]}
  */
-export function uniqueArray(array: number[]): number[] {
-  const alreadyAdded: { [key: number]: boolean | undefined } = {}
-  const res: number[] = []
+export function uniqueArray(array) {
+  const alreadyAdded = {}
+  const res = []
 
   array.forEach(element => {
     if (alreadyAdded[element] === undefined) {
@@ -35,7 +35,7 @@ export function uniqueArray(array: number[]): number[] {
  * @param {string} secondString
  * @return {boolean}
  */
-export function isIsomorphic(firstString: string, secondString: string) {
+export function isIsomorphic(firstString, secondString) {
   if (firstString.length !== secondString.length) {
     return false
   }
@@ -76,7 +76,7 @@ export function isIsomorphic(firstString: string, secondString: string) {
  * @param {number} digit
  * @return {string}
  */
-export function decimalToBinary(digit: number) {
+export function decimalToBinary(digit) {
   if (digit <= 1) {
     return digit.toString()
   }
@@ -103,7 +103,7 @@ export function decimalToBinary(digit: number) {
  * @param {number[][]} originalMatrix
  * @return {number[][]}
  */
-export function squareMatrixRotation(originalMatrix: number[][]) {
+export function squareMatrixRotation(originalMatrix) {
   const rotatedMatrix = originalMatrix.map((array, row) =>
     array.map((_, column) => {
       const x = originalMatrix.length - column - 1
