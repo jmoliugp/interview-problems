@@ -5,6 +5,10 @@ extends:
   - 'eslint:recommended'
   - 'plugin:@typescript-eslint/recommended'
   - 'plugin:node/recommended'
+overrides:
+  files: ['**/*.test.js']
+  env:
+    jest: true
 parser: '@typescript-eslint/parser'
 parserOptions:
   ecmaFeatures:
