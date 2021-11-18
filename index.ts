@@ -1,6 +1,12 @@
-// Removes duplicates of an array and returns an array of only unique elements.
-// Example:
-// [1, 2, 3, 5, 1, 5, 9, 1, 2, 8] => [1, 2, 3, 5, 9, 8]
+/**
+ * Removes duplicates of an array and returns an array of only unique elements.
+ *
+ * Example:
+ * [1, 2, 3, 5, 1, 5, 9, 1, 2, 8] => [1, 2, 3, 5, 9, 8]
+ *
+ * @param {number[]} array
+ * @return {number[]}
+ */
 export function uniqueArray(array: number[]): number[] {
   const alreadyAdded: { [key: number]: boolean | undefined } = {}
   const res: number[] = []
@@ -15,13 +21,20 @@ export function uniqueArray(array: number[]): number[] {
   return res
 }
 
-// For two strings to be isomorphic, all occurrences of a character in string A can be replaced with another character
-// to get string B. The order of the characters must be preserved. There must be one-to-one mapping for ever char of
-// string A to every char of string B.
-// Example:
-// `paper` and `title` => true
-// `egg` and `sad` => false
-// `dgg` and `add` => true
+/**
+ * For two strings to be isomorphic, all occurrences of a character in string A can be replaced with another character
+ * to get string B. The order of the characters must be preserved. There must be one-to-one mapping for ever char of
+ * string A to every char of string B.
+ *
+ * Example:
+ * `paper` and `title` => true
+ * `egg` and `sad` => false
+ * `dgg` and `add` => true
+ *
+ * @param {string} firstString
+ * @param {string} secondString
+ * @return {boolean}
+ */
 export function isIsomorphic(firstString: string, secondString: string) {
   if (firstString.length !== secondString.length) {
     return false
@@ -52,11 +65,17 @@ export function isIsomorphic(firstString: string, secondString: string) {
   return isValid
 }
 
-// Write a recursive function that returns the binary string of a given decimal number
-// Example:
-// 3 => 11
-// 8 => '1000'
-// 1000 => '1111101000'
+/**
+ * Write a recursive function that returns the binary string of a given decimal number.
+ *
+ * Example:
+ * 3 => 11
+ * 8 => '1000'
+ * 1000 => '1111101000'
+ *
+ * @param {number} digit
+ * @return {string}
+ */
 export function decimalToBinary(digit: number) {
   if (digit <= 1) {
     return digit.toString()
@@ -71,13 +90,19 @@ export function decimalToBinary(digit: number) {
   }
 }
 
-// You are given an n x n 2D matrix (representing an image). Rotate the matrix by 90 degrees (clockwise).
-// Example:
-// [                   [
-//   [1, 2, 3],          [7, 4, 1],
-//   [4, 5, 6],   =>     [8, 5, 2],
-//   [7, 8, 9],          [9, 6, 3],
-// ]                   ]
+/**
+ * You are given an n x n 2D matrix (representing an image). Rotate the matrix by 90 degrees (clockwise).
+ *
+ * Example:
+ * [                   [
+ *   [1, 2, 3],          [7, 4, 1],
+ *   [4, 5, 6],   =>     [8, 5, 2],
+ *   [7, 8, 9],          [9, 6, 3],
+ * ]                   [
+ *
+ * @param {number[][]} originalMatrix
+ * @return {number[][]}
+ */
 export function squareMatrixRotation(originalMatrix: number[][]) {
   const rotatedMatrix = originalMatrix.map((array, row) =>
     array.map((_, column) => {
